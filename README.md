@@ -53,29 +53,29 @@ When possible subelements are documented, they need to specify what format to us
 ## Possible elements in the "information" group
 
 ### company
-The company that wants who owns the information in the XML
+The company that wants who owns the information in the file
 
 ### person
-The person responsible for the information in the XML
+The person responsible for the information in the file
 
 ### editor_software
-The software that has generated the XML
+The software that has generated the file
 
 ### created
-The timestamp of the creation of the XML, in format YYYY-MM-DD HH:MM:SS
+The timestamp of the creation of the file, in format YYYY-MM-DD HH:MM:SS
 
 ### updated
-The timestamp of the last update of the XML, in format YYYY-MM-DD HH:MM:SS
+The timestamp of the last update of the file, in format YYYY-MM-DD HH:MM:SS
 
 ### project
-The name of the project included in the XML
+The name of the project included in the file
 
 ### version
-The version of the information included in the XML
+The version of the information included in the file
 
 ### Examples
 Look in the examples folder
 
 ## Projects using this package format:
-Open Trade Transfer Package: Printed Circuits Fabrication Data
+- Open Trade Transfer Package: Printed Circuits Fabrication Data
 [Open Trade Transfer Package: Printed Circuits Fabrication Data](https://github.com/elmatica/OpenTrade_PrintedCircuitsFabricationData)
