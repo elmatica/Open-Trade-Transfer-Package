@@ -21,7 +21,7 @@ Within the root level, you need to specify an element with the name of "open_tra
 ```
 
 ## Version
-Current version is 0.1. This should stated in every file as shoed in the example above. 0.1 is the first released version, and there is no prior versions.
+Current version is 0.1. This should stated in every file as showed in the example above. 0.1 is the first released version, and there is no prior versions.
 
 ## Structure
 Within the root level (open_trade_transfer_package) everything is divided into four groups and their subgroups:
@@ -78,4 +78,4 @@ Look in the examples folder
 
 ## Projects using this package format:
 - Open Trade Transfer Package: Printed Circuits Fabrication Data
-[Open Trade Transfer Package: Printed Circuits Fabrication Data](https://github.com/elmatica/OpenTrade_PrintedCircuitsFabricationData)
+[Open Trade Transfer Package: Printed Circuits Fabrication Data](https://github.com/elmatica/Open-Trade_Printed_Circuits_Fabrication_Data)
