@@ -4,24 +4,26 @@ A structure that allows files to be generated to facilitate the exchange of data
 Is meant to facilitate both XML and JSON creation.
 
 ## How to define the file as an Open Trade Transfer Package
-Within the root level, you need to specify an element with the name of "open_trade_transfer_package":
+The root level should be an element with the name of "open_trade_transfer_package":
 
 #### Examples
 ```
 {
   "open_trade_transfer_package": {
-    "version": "0.1"
+    "version": "0.1",
+    {content here}
 }
 ```
 
 ```
 <?xml version = "1.0" encoding = "UTF-8"?>
 <open_trade_transfer_package version="0.01">
+  {content here}
 </open_trade_transfer_package>
 ```
 
 ## Version
-Current version is 0.1. This should stated in every file as showed in the example above. 0.1 is the first released version, and there is no prior versions.
+Current version is 0.1. This should stated in every file as showed in the example above. 0.1 is the first released version, and there are no prior versions.
 
 ## Structure
 Within the root level (open_trade_transfer_package) everything is divided into four groups and their subgroups:
