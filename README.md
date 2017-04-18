@@ -55,7 +55,7 @@ When possible subelements are documented, they need to specify what format to us
 ## Possible elements in the "information" group
 
 ### company
-The company that wants who owns the information in the file
+The company who owns the information in the file
 
 ### person
 The person responsible for the information in the file
@@ -64,10 +64,10 @@ The person responsible for the information in the file
 The software that has generated the file
 
 ### created
-The timestamp of the creation of the file, in format YYYY-MM-DD HH:MM:SS
+The timestamp of the creation of the file, in format YYYY-MM-DDTHH:MM:SS
 
 ### updated
-The timestamp of the last update of the file, in format YYYY-MM-DD HH:MM:SS
+The timestamp of the last update of the file, in format YYYY-MM-DDTHH:MM:SS
 
 ### project
 The name of the project included in the file
@@ -75,7 +75,74 @@ The name of the project included in the file
 ### version
 The version of the information included in the file
 
-### Examples
+## Possible generic elements in the products/profile/capability sections.
+If you want to place generic information in the file, you should enclose the information within a section called "generic". E.g. if you wanted to create a profile indicating that no products can be manufactures outside NATO countries, you could do it like this:
+
+```
+{
+  "open_trade_transfer_package": {
+    "version": "0.1",
+    "information": {
+      "company_name": "Elmatica as",
+      "date": "2017-04-03T08:00CET"
+    },
+    "profile": {
+      "restricted": {
+        "generic": {
+          "version": "0.1",
+          "country_of_origin": {
+            "nato_member": false
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Standards and Requirements ("standards")
+If the format is boolean and nothing is stated other than the name of the standard in the Decription column, it should be understood as follows: Are to be met (if Specification), required/restricted/default (in Profile) or possible (in Capability)
+
+Data tag | Format | S | P | C | Description
+---------|--------|---|---|---|-------------
+*ul* | Boolean | O | O | F | Indicating if UL is required for the board. Can not be used as a capability, as this will be indicated on each material
+*c_ul* | Boolean | O | O | F | Indicating if Canadian UL is required for the board. Can not be used as a capability, as this will be indicated on each material
+*rohs* | Boolean | O | O | O | RoHS
+*itar* | Boolean | O | O | O | ITAR
+*dfars* | Boolean | O | O | O | DFARS
+
+E.g. this would indicate that UL approval should be handled as a default if not otherwise instructed:
+```
+{
+  "open_trade_transfer_package": {
+    "version": "0.1",
+    "information": {
+      "company_name": "Elmatica as",
+      "date": "2017-04-03T08:00CET"
+    },
+    "profile": {
+      "default": {
+        "generic": {
+          "version": "0.1",
+          "standards": {
+            "ul": true
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Country of Origin ("country_of_origin")
+Data tag | Format | S | P | C | Description
+---------|--------|---|---|---|-------------
+*iso_3166_1_alpha_3* | String | O | O | O | A three letter string representation of the Country of origin according too ISO 3166-1
+*iso_3166_1_alpha_2* | String | O | O | O | A two letter string representation of the Country of origin according too ISO 3166-1
+*nato_member* | Boolean | O | O | O | Indicates if the COO is a NATO member state (or needs to be if used as a profile)
+*eu_member* | Boolean | O | O | O | Indicates if the COO is a European Union member state (or needs to be if used in a profile)
+
+## Examples
 Look in the examples folder
 
 ## Projects using this package format:
