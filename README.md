@@ -35,7 +35,7 @@ Within the root level (open_trade_transfer_package) everything is divided into f
   - defaults
   - enforced
   - restricted
-- capability
+- capabilities
   - summary
   - materials
 - custom
@@ -56,13 +56,13 @@ When possible subelements are documented, they need to specify what format to us
 ## Possible elements in the "information" group
 
 ### company
-The company who owns the information in the file
+A string wih the company who owns the information in the file
 
 ### person
-The person responsible for the information in the file
+A string with the person responsible for the information in the file
 
 ### editor_software
-The software that has generated the file
+Astring with the software that has generated the file
 
 ### created
 The timestamp of the creation of the file, in format YYYY-MM-DDTHH:MM:SS
@@ -71,10 +71,13 @@ The timestamp of the creation of the file, in format YYYY-MM-DDTHH:MM:SS
 The timestamp of the last update of the file, in format YYYY-MM-DDTHH:MM:SS
 
 ### project
-The name of the project included in the file
+A string with name of the project included in the file
 
 ### version
-The version of the information included in the file
+A float with the version of the information included in the file
+
+### Description
+A string representing the description of the content
 
 ## Possible generic elements in the products/profile/capability sections.
 If you want to place generic information in the file, you should enclose the information within a section called "generic". E.g. if you wanted to create a profile indicating that no products can be manufactures outside NATO countries, you could do it like this:
