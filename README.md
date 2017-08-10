@@ -65,10 +65,10 @@ A string with the person responsible for the information in the file
 Astring with the software that has generated the file
 
 ### created
-The timestamp of the creation of the file, in format YYYY-MM-DDTHH:MM:SS
+The timestamp of the creation of the file, in format RFC 3339 date-time
 
 ### updated
-The timestamp of the last update of the file, in format YYYY-MM-DDTHH:MM:SS
+The timestamp of the last update of the file, in format RFC 3339 date-time
 
 ### project
 A string with name of the project included in the file
@@ -88,7 +88,7 @@ If you want to place generic information in the file, you should enclose the inf
     "version": "0.1",
     "information": {
       "company_name": "Elmatica as",
-      "date": "2017-04-03T08:00CET"
+      "date": "2017-04-03T08:00Z"
     },
     "profile": {
       "restricted": {
@@ -122,7 +122,7 @@ E.g. this would indicate that UL approval should be handled as a default if not 
     "version": "0.1",
     "information": {
       "company_name": "Elmatica as",
-      "date": "2017-04-03T08:00CET"
+      "date": "2017-04-03T08:00Z"
     },
     "profile": {
       "default": {

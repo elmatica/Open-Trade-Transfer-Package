@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "information": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "company": {
+          "type": "string",
+          "description": "The company who owns the information in the file"
+        },
+        "person": {
+          "type": "string",
+          "description": "The person responsible for the information in the file"
+        },
+        "editor_software": {
+          "type": "string",
+          "description": "The software that has generated the file"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp of the creation of the file, in type YYYY-MM-DDTHH:MM:SS"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp of the last update of the file, in format YYYY-MM-DDTHH:MM:SS"
+        },
+        "project": {
+          "type": "string",
+          "description": "The name of the project included in the file"
+        },
+        "version": {
+          "type": "number",
+          "description": "The name of the project included in the file"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "properties":{
+      }
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+      }
+    },
+    "capability": {
+      "type": "object",
+      "properties": {
+      }
+    },
+    "custom": {
+      "type": "object",
+      "properties": {
+        "colors": {
+          "type": "object",
+          "properties": {
+          },
+          "aliases": "",
+          "name": "any_name",
+          "description": "Colors can be defined by hex, rgb, cmyk or name. Name of the color present here can be references in the other elements"
+        },
+        "materials": {
+          "type": "object",
+          "properties": {
+
+          }
+        }
+      }
+    }
+  },
+  "id": "https://github.com/elmatica/Open-Trade-Transfer-Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["open_trade_transfer_package"],
+  "properties": {
+    "open_trade_transfer_package": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {"type": "string"},
+        "information": { "$ref": "#/definitions/information" },
+        "products": { "$ref": "#/definitions/product" },
+        "profiles": { "$ref": "#/definitions/profile" },
+        "capabilities": { "$ref": "#/definitions/capability" },
+        "custom": { "$ref": "#/definitions/custom" }
+      }
+    }
+  }
+}
