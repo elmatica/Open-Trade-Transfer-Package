@@ -82,7 +82,7 @@
   "properties": {
     "open_trade_transfer_package": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "version": {"type": "string"},
         "information": { "$ref": "#/definitions/information" },
