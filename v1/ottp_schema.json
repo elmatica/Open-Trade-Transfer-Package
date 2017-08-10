@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/elmatica/Open-Trade-Transfer-Package/master/ottp_schema.json",
+  "id": "https://raw.githubusercontent.com/elmatica/Open-Trade-Transfer-Package/master/v1/ottp_schema.json",
   "type": "object",
   "additionalProperties": true,
   "required": ["open_trade_transfer_package"],
