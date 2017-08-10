@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "information": {
       "type": "object",
@@ -20,12 +19,12 @@
         "created": {
           "type": "string",
           "format": "date-time",
-          "description": "The timestamp of the creation of the file, in type YYYY-MM-DDTHH:MM:SS"
+          "description": "The timestamp of the creation of the file, in RFC 3339 date-time format"
         },
         "updated": {
           "type": "string",
           "format": "date-time",
-          "description": "The timestamp of the last update of the file, in format YYYY-MM-DDTHH:MM:SS"
+          "description": "The timestamp of the last update of the file, in RFC 3339 date-time format"
         },
         "project": {
           "type": "string",
@@ -69,27 +68,8 @@
         "materials": {
           "type": "object",
           "properties": {
-
           }
         }
-      }
-    }
-  },
-  "id": "https://github.com/elmatica/Open-Trade-Transfer-Package",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["open_trade_transfer_package"],
-  "properties": {
-    "open_trade_transfer_package": {
-      "type": "object",
-      "additionalProperties": true,
-      "properties": {
-        "version": {"type": "string"},
-        "information": { "$ref": "#/definitions/information" },
-        "products": { "$ref": "#/definitions/product" },
-        "profiles": { "$ref": "#/definitions/profile" },
-        "capabilities": { "$ref": "#/definitions/capability" },
-        "custom": { "$ref": "#/definitions/custom" }
       }
     }
   }

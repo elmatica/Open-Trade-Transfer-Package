@@ -10,20 +10,20 @@ The root level should be an element with the name of "open_trade_transfer_packag
 ```
 {
   "open_trade_transfer_package": {
-    "version": "0.1",
+    "version": "1.0",
     {content here}
 }
 ```
 
 ```
 <?xml version = "1.0" encoding = "UTF-8"?>
-<open_trade_transfer_package version="0.01">
+<open_trade_transfer_package version="1.0">
   {content here}
 </open_trade_transfer_package>
 ```
 
 ## Version
-Current version is 0.1. This should stated in every file as showed in the example above. 0.1 is the first released version, and there are no prior versions.
+Current version is 1.0. This should stated in every file as showed in the example above. 1.0 is the first released version, and there are no prior versions.
 
 ## Structure
 Within the root level (open_trade_transfer_package) everything is divided into four groups and their subgroups:
@@ -41,6 +41,9 @@ Within the root level (open_trade_transfer_package) everything is divided into f
 - custom
   - colors
   - materials
+
+# JSON schema
+JSON schema is available in the versions folder. To link to it, please use the raw link. The schema allows you to validate your OTTP file syntax.
 
 ## Data formats
 When possible subelements are documented, they need to specify what format to use. Possible formats are:
@@ -85,7 +88,7 @@ If you want to place generic information in the file, you should enclose the inf
 ```
 {
   "open_trade_transfer_package": {
-    "version": "0.1",
+    "version": "1.0",
     "information": {
       "company_name": "Elmatica as",
       "date": "2017-04-03T08:00Z"
@@ -93,7 +96,7 @@ If you want to place generic information in the file, you should enclose the inf
     "profile": {
       "restricted": {
         "generic": {
-          "version": "0.1",
+          "version": "1.0",
           "country_of_origin": {
             "nato_member": false
           }
@@ -119,7 +122,7 @@ E.g. this would indicate that UL approval should be handled as a default if not 
 ```
 {
   "open_trade_transfer_package": {
-    "version": "0.1",
+    "version": "1.0",
     "information": {
       "company_name": "Elmatica as",
       "date": "2017-04-03T08:00Z"
@@ -127,7 +130,7 @@ E.g. this would indicate that UL approval should be handled as a default if not 
     "profile": {
       "default": {
         "generic": {
-          "version": "0.1",
+          "version": "1.0",
           "standards": {
             "ul": true
           }
