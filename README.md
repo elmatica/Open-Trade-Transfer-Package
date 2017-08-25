@@ -43,7 +43,31 @@ Within the root level (open_trade_transfer_package) everything is divided into f
   - materials
 
 # JSON schema
-JSON schema is available in the versions folder. To link to it, please use the raw link. The schema allows you to validate your OTTP file syntax.
+JSON schema is available in the versions folder. To link to it, please use the raw link. The schema allows you to validate your OTTP file syntax. An example of how this is done in Ruby with the [json-schema GEM](https://github.com/ruby-json-schema/json-schema) below:
+
+´´´
+ottp = '{
+  "open_trade_transfer_package": {
+    "version": "1.0",
+    "information": {
+      "company": "Elmatica as",
+      "created": "2017-04-03T08:00:00Z"
+    },
+    "profiles": {
+      "restricted": {
+        "generic": {
+          "version": "1.0",
+          "country_of_origin": {
+            "nato_member": false
+          }
+        }
+      }
+    }
+  }
+}'
+
+puts JSON::Validator.validate!('https://raw.githubusercontent.com/elmatica/Open-Trade-Transfer-Package/master/v1/ottp_schema.json', ottp)
+´´´
 
 ## Data formats
 When possible subelements are documented, they need to specify what format to use. Possible formats are:
@@ -90,10 +114,10 @@ If you want to place generic information in the file, you should enclose the inf
   "open_trade_transfer_package": {
     "version": "1.0",
     "information": {
-      "company_name": "Elmatica as",
-      "date": "2017-04-03T08:00Z"
+      "company": "Elmatica as",
+      "created": "2017-04-03T08:00:00Z"
     },
-    "profile": {
+    "profiles": {
       "restricted": {
         "generic": {
           "version": "1.0",
@@ -124,8 +148,8 @@ E.g. this would indicate that UL approval should be handled as a default if not 
   "open_trade_transfer_package": {
     "version": "1.0",
     "information": {
-      "company_name": "Elmatica as",
-      "date": "2017-04-03T08:00Z"
+      "company": "Elmatica as",
+      "created": "2017-04-03T08:00:00Z"
     },
     "profile": {
       "default": {

@@ -46,12 +46,38 @@
     },
     "profile": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
+        "defaults": {
+          "type": "object",
+          "properties": {
+          }
+        },
+        "enforced": {
+          "type": "object",
+          "properties": {
+          }
+        },
+        "restricted": {
+          "type": "object",
+          "properties": {
+          }
+        }
       }
     },
     "capability": {
       "type": "object",
       "properties": {
+        "summary": {
+          "type": "object",
+          "properties": {
+          }
+        },
+        "materials": {
+          "type": "object",
+          "properties": {
+          }
+        }
       }
     },
     "custom": {
