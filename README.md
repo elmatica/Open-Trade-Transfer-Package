@@ -45,7 +45,7 @@ Within the root level (open_trade_transfer_package) everything is divided into f
 # JSON schema
 JSON schema is available in the versions folder. To link to it, please use the raw link. The schema allows you to validate your OTTP file syntax. An example of how this is done in Ruby with the [json-schema GEM](https://github.com/ruby-json-schema/json-schema) below:
 
-´´´
+```
 ottp = '{
   "open_trade_transfer_package": {
     "version": "1.0",
@@ -67,7 +67,7 @@ ottp = '{
 }'
 
 puts JSON::Validator.validate!('https://raw.githubusercontent.com/elmatica/Open-Trade-Transfer-Package/master/v1/ottp_schema.json', ottp)
-´´´
+```
 
 ## Data formats
 When possible subelements are documented, they need to specify what format to use. Possible formats are:
