@@ -77,8 +77,9 @@ When possible subelements are documented, they need to specify what format to us
 - Text - The data is free format text.  For multiline entries, line breaks will be preserved where possible and the text may be truncated on import if the text is too long for the importing program to store.  Multiline entries may be split with either a newline (Unix format) or a carriage return – newline combination (DOS format).  Importing programs should accept either.
 - Boolean - May be either TRUE or FALSE, with TRUE and FALSE in capitals.  A default value should be specified for optional fields - the default is used if the value is not present.
 - Integer - An integer number with no decimal point.  May include negative values - examples include ...-3, -2, -1, 0, 1, 2, 3,...
-- Floating Point - A floating point number, usually expressed in its simplest form with a decimal point as in "1.2", "0.004", etc...  Programs shall endeavor to store as many significant digits as possible to avoid truncating or losing small values.
-- Range - contains two values separated by three dots. E.g. "1...3". If a range is allowed, then the kind of format that the range can contain must also be specified.
+- Float - A floating point number, usually expressed in its simplest form with a decimal point as in "1.2", "0.004", etc...  Programs shall endeavor to store as many significant digits as possible to avoid truncating or losing small values.
+- Range - contains two values separated by three dots. E.g. "1...3". If a range is allowed, then the kind of format that the range can contain must also be specified. Decimals are allowed, e.g. "1.2...4.2".
+- Stringlist - several values separated by a comma, e.g. "1,TEST,TEST2"
 
 ## Possible elements in the "information" group
 
