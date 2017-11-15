@@ -9,7 +9,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "version": {"type": "string"},
+        "version": {"type": "number"},
         "information": { "$ref": "ottp_schema_definitions.json#/definitions/information" },
         "products": { "$ref": "ottp_schema_definitions.json#/definitions/product" },
         "profiles": { "$ref": "ottp_schema_definitions.json#/definitions/profile" },
