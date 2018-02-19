@@ -10,13 +10,13 @@ The root level should be an element with the name of "open_trade_transfer_packag
 ```
 {
   "open_trade_transfer_package": {
-    "version": "1.0",
+    "version": 1.0,
     {content here}
 }
 ```
 
 ```
-<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml version = 1.0 encoding = "UTF-8"?>
 <open_trade_transfer_package version="1.0">
   {content here}
 </open_trade_transfer_package>
@@ -48,7 +48,7 @@ JSON schema is available in the versions folder. To link to it, please use the r
 ```
 ottp = '{
   "open_trade_transfer_package": {
-    "version": "1.0",
+    "version": 1.0,
     "information": {
       "company": "Elmatica as",
       "created": "2017-04-03T08:00:00Z"
@@ -56,7 +56,7 @@ ottp = '{
     "profiles": {
       "restricted": {
         "generic": {
-          "version": "1.0",
+          "version": 1.0,
           "country_of_origin": {
             "nato_member": false
           }
@@ -102,7 +102,7 @@ The timestamp of the last update of the file, in format RFC 3339 date-time
 A string with name of the project included in the file
 
 ### version
-A float with the version of the information included in the file
+A number with the version of the information included in the file
 
 ### Description
 A string representing the description of the content
@@ -113,7 +113,7 @@ If you want to place generic information in the file, you should enclose the inf
 ```
 {
   "open_trade_transfer_package": {
-    "version": "1.0",
+    "version": 1.0,
     "information": {
       "company": "Elmatica as",
       "created": "2017-04-03T08:00:00Z"
@@ -121,7 +121,7 @@ If you want to place generic information in the file, you should enclose the inf
     "profiles": {
       "restricted": {
         "generic": {
-          "version": "1.0",
+          "version": 1.0,
           "country_of_origin": {
             "nato_member": false
           }
@@ -133,7 +133,7 @@ If you want to place generic information in the file, you should enclose the inf
 ```
 
 ### Standards and Requirements ("standards")
-If the format is boolean and nothing is stated other than the name of the standard in the Decription column, it should be understood as follows: Are to be met (if Specification), required/restricted/default (in Profile) or possible (in Capability)
+If the format is boolean and nothing is stated other than the name of the standard in the Description column, it should be understood as follows: Are to be met (if Specification), required/restricted/default (in Profile) or possible (in Capability)
 
 Data tag | Format | S | P | C | Description
 ---------|--------|---|---|---|-------------
@@ -147,7 +147,7 @@ E.g. this would indicate that UL approval should be handled as a default if not 
 ```
 {
   "open_trade_transfer_package": {
-    "version": "1.0",
+    "version": 1.0,
     "information": {
       "company": "Elmatica as",
       "created": "2017-04-03T08:00:00Z"
@@ -155,7 +155,7 @@ E.g. this would indicate that UL approval should be handled as a default if not 
     "profile": {
       "default": {
         "generic": {
-          "version": "1.0",
+          "version": 1.0,
           "standards": {
             "ul": true
           }
