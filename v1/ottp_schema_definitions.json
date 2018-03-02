@@ -89,7 +89,6 @@
             "name": { "type": "string" },
             "hex": { "type": "string" },
             "value": { "type": "string" }
-}
           },
           "aliases": "",
           "name": "any_name",
