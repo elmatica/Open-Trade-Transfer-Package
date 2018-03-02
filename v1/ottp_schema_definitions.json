@@ -84,15 +84,19 @@
       "type": "object",
       "properties": {
         "colors": {
-          "type": "object",
-          "properties": {
-            "name": { "type": "string" },
-            "hex": { "type": "string" },
-            "value": { "type": "string" }
-          },
-          "aliases": "",
-          "name": "any_name",
-          "description": "Colors can be defined by hex, rgb, cmyk or name. Name of the color present here can be references in the other elements"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "value_type": { "type": "string" },
+              "value": { "type": "string" }
+            },
+            "aliases": "",
+            "name": "any_name",
+            "description": "Colors can be defined by hex, rgb, cmyk or name. Name of the color present here can be references in the other elements"
+          }
         },
         "materials": {
           "type": "object",
