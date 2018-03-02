@@ -205,5 +205,4 @@ Data tag | Format | Description
 Look in the examples folder
 
 ## Projects using this package format:
-- Open Trade Transfer Package: Printed Circuits Fabrication Data
-[CircuitData Language](https://github.com/CircuitData/CircuitData-Language)
+- [CircuitData Language](https://github.com/CircuitData/CircuitData-Language)
