@@ -136,7 +136,7 @@ If you want to place generic information in the file, you should enclose the inf
 If the format is boolean and nothing is stated other than the name of the standard in the Description column, it should be understood as follows: Are to be met (if Specification), required/restricted/default (in Profile) or possible (in Capability)
 
 Data tag | Format | Description
----------|--------|---|---|---|-------------
+---------|--------|-------------
 *ul* | Boolean | Indicating if UL is required for the board. Can not be used as a capability, as this will be indicated on each material
 *c_ul* | Boolean | Indicating if Canadian UL is required for the board. Can not be used as a capability, as this will be indicated on each material
 *rohs* | Boolean | RoHS
@@ -168,8 +168,8 @@ E.g. this would indicate that UL approval should be handled as a default if not 
 
 ### Country of Origin ("country_of_origin")
 
-Data tag | Format | S | P | C | Description
----------|--------|---|---|---|-------------
+Data tag | Format | Description
+---------|--------|-------------
 *iso_3166_1_alpha_3* | String | A three letter string representation of the Country of origin according too ISO 3166-1
 *iso_3166_1_alpha_2* | String | A two letter string representation of the Country of origin according too ISO 3166-1
 *nato_member* | Boolean | Indicates if the COO is a NATO member state (or needs to be if used as a profile)
@@ -180,8 +180,8 @@ This element is where you place description of colors or materials
 
 ### Colors
 
-Data tag | Format | S | P | C | Description
----------|--------|---|---|---|-------------
+Data tag | Format | Description
+---------|--------|-------------
 *name* | String | Any name to describe the colour
 *value_type* | String | Can be any of "hex", "rgb", "cmyk" or "name"
 *value* | String | If value_type is hex, the value needs to be a \"#\" + 6 hexadecimals (e.g. \"#FFFFFF\"). for \"rgb\" the format is \"rgb(0, 255, 255)\", for \"cmyk\" the format is \"cmyk(100%, 0%, 0%, 0%)\". The name is just a string.
