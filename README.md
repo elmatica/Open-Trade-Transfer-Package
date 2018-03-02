@@ -206,4 +206,4 @@ Look in the examples folder
 
 ## Projects using this package format:
 - Open Trade Transfer Package: Printed Circuits Fabrication Data
-[Open Trade Transfer Package: Printed Circuits Fabrication Data](https://github.com/elmatica/Open-Trade_Printed_Circuits_Fabrication_Data)
+[CircuitData Language](https://github.com/CircuitData/CircuitData-Language)
